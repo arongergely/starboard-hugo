@@ -180,7 +180,7 @@
       </div>
       <div class="col-lg-6">
         {{ $map := .Site.Params.map }}
-        <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
+        <div id="map" data-lat={{ $map.latitude }} data-lon={{ $map.longitude }}>
         </div>
       </div>
     </div>
