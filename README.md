@@ -28,12 +28,11 @@ Checkout the live demo [here](https://portio-hugo.staticmania.com/)
 ## Features
 
 - Responsive Ready.
-- Powered by Bootstrap 4.
+- Powered by Bootstrap 5.
 - Blog Support.
 - Well formatted code.
 - Easy Customization.
 - Formspree Contact form.
-- Google Analytics.
 - Forestry Integrated.
 - Crafted for Personal Portfolio
 
