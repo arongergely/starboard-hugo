@@ -12,13 +12,13 @@
                     </div>
 
                     <div class="btn-group nav mt-5">
-                        <a href="#{{.tab1Target}}" class="btn btn-primary active" data-toggle="tab">{{ .tab1Name }}</a>
-                        <a href="#{{.tab2Target}}" class="btn btn-primary" data-toggle="tab">{{ .tab2Name }}</a>
+                        <a href="#{{.tab1Target}}" class="btn btn-primary active" data-bs-toggle="tab">{{ .tab1Name }}</a>
+                        <a href="#{{.tab2Target}}" class="btn btn-primary" data-bs-toggle="tab">{{ .tab2Name }}</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="tab-content ">
+                <div class="tab-content">
                     <div class="resume__education tab-pane active" id="{{.tab1Target}}">
                         {{ $Section := .education }}
                         {{ range $Section }}
