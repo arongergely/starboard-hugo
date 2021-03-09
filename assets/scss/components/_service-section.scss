@@ -26,15 +26,6 @@
             display: none;
         }
     }
-    &__background_pattern {
-        position: absolute;
-        bottom: 4%;
-        left: 6%;
-        animation: move_top 5s infinite linear;
-        @include desktop {
-            display: none;
-        }
-    }
     &__slider {
         &_item {
             margin: 15px;

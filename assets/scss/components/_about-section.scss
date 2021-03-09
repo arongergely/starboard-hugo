@@ -11,22 +11,6 @@
       @include desktop {
         width: 100%;
       }
-      .about-svg {
-        position: absolute;
-        top: -11%;
-        left: -17%;
-        z-index: -1;
-        height: 150px;
-        animation: move_top 4s infinite;
-        @include tablet {
-          top: -7%;
-          left: -16%;
-        }
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
       .about_content-thumb-image {
         img {
           height: 100%;

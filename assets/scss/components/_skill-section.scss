@@ -17,37 +17,10 @@
       display: none;
     }
   }
-  &__background_pattern {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
-    height: 100px;
-    width: 100px;
-    animation: move_top 3s infinite linear;
-    img {
-      height: 100%;
-      width: 100%;
-    }
-    @include desktop {
-      display: none;
-    }
-  }
   &__thumb {
     position: relative;
     @include tablet {
       margin-bottom: 30px;
-    }
-    &_pattern {
-      position: absolute;
-      top: -11%;
-      left: -17%;
-      z-index: -1;
-      height: 150px;
-      animation: move_top 4s infinite linear;
-      img {
-        height: 100%;
-        width: 100%;
-      }
     }
     &_image {
       margin-right: 7%;
