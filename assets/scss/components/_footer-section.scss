@@ -35,7 +35,6 @@
             transform: rotate(-20deg);
             top: -43%;
             left: 2%;
-            animation: moveLeft 5s infinite linear;
             svg {
                 path {
                     fill: #ffffff;
@@ -51,7 +50,6 @@
             right: -9%;
             width: 235px;
             height: 208px;
-            animation: move_top 3s infinite linear;
             svg {
                 height: 100%;
                 width: 100%;
