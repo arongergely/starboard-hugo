@@ -87,16 +87,23 @@
 		</div>
 	</div>
 </section>
-<script src="{{ "plugins/leaflet/leaflet.js" | absURL }}"></script>
-<script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+{{ $leaflet := resources.Get "js/vendor/leaflet.js" }}
+{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
 {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
-<script src="{{ $bootstrap.Permalink }}"></script>
-<script src="{{ "plugins/slick/slick.min.js" | absURL }}"></script>
-<script src="{{ "plugins/waypoint/jquery.waypoints.min.js" | absURL }}"></script>
-<script src="{{ "plugins/magnafic-popup/jquery.magnific-popup.min.js" | absURL }}"></script>
-<script src="{{ "plugins/imagesloaded/imagesloaded.min.js" | absURL }}"></script>
-<script src="{{ "plugins/masonry/masonry.min.js" | absURL }}"></script>
+{{ $slick := resources.Get "js/vendor/slick.min.js" }}
+{{ $waypoints := resources.Get "js/vendor/jquery.waypoints.min.js" }}
+{{ $magnificpopup := resources.Get "js/vendor/jquery.magnific-popup.min.js" }}
+{{ $imagesloaded := resources.Get "js/vendor/imagesloaded.min.js" }}
+{{ $masonry := resources.Get "js/vendor/masonry.min.js" }}
 {{ $formhandler := resources.Get "js/form-handler.js" | minify }}
-<script src="{{ $formhandler.Permalink }}"></script>
 {{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $leaflet.Permalink }}"></script>
+<script src="{{ $jquery.Permalink }}"></script>
+<script src="{{ $bootstrap.Permalink }}"></script>
+<script src="{{ $slick.Permalink }}"></script>
+<script src="{{ $waypoints.Permalink }}"></script>
+<script src="{{ $magnificpopup.Permalink }}"></script>
+<script src="{{ $imagesloaded.Permalink }}"></script>
+<script src="{{ $masonry.Permalink }}"></script>
+<script src="{{ $formhandler.Permalink }}"></script>
 <script src="{{ $script.Permalink }}"></script>
