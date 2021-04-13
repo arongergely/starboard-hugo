@@ -30,7 +30,7 @@
   </div>
 </header>
 
-{{ $address := .Site.Params.address }}
+{{ $details := .Site.Params.details }}
 <section class="section contact__info">
   <div class="container">
     <div class="row">
@@ -50,7 +50,7 @@
           </div>
           <h4>Office Address</h4>
           <p>
-            {{ $address.address }}
+            {{ $details.address }}
           </p>
         </div>
       </div>
@@ -69,8 +69,8 @@
             </div>
           </div>
           <h4>Phone & Email</h4>
-          <p>{{ $address.phone }}<br>
-            <a href="mailto:{{ $address.email }}">{{ $address.email }}</a>
+          <p>{{ $details.phone }}<br>
+            <a href="mailto:{{ $details.email }}">{{ $details.email }}</a>
           </p>
 
         </div>
@@ -91,7 +91,7 @@
           </div>
           <h4>Working Hours</h4>
           <p>
-            {{ $address.openingHours }}
+            {{ $details.openingHours }}
           </p>
         </div>
       </div>

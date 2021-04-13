@@ -5,6 +5,8 @@
 		</svg>
 	</div>
 	<div class="container">
+		{{ with .Site.Data.footerCTA }}
+		{{ if .enable }}
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="footer__cta">
@@ -23,16 +25,19 @@
 						</svg>
 					</div>
 					<div class="text-light footer__cta_content">
-						<span>Contact me</span>
-						<h2 class="mb-0">Let’s Start a Project</h2>
+						<span>{{ .topTitle }}</span>
+					  {{ .content | markdownify }}
 					</div>
+					{{ if .buttonEnable }}
 					<div class="footer__cta_action">
-						<a class="btn btn-light btn-zoom" href="{{ .Site.Params.contactLink | absURL }}">Get in
-							touch</a>
+						<a class="btn btn-light btn-zoom" href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
 					</div>
+					{{ end }}
 				</div>
 			</div>
 		</div>
+		{{ end }}
+		{{ end }}
 		<div class="row footer__widget">
 			<div class="col-lg-4">
 				<div class="footer__widget_logo mb-5">
@@ -52,16 +57,33 @@
 			</div>
 			<div class="col-lg-4">
 				<div class="text-light footer__widget_address mb-5">
-					<h4 class="base-font">Address</h4>
-					{{ $address := .Site.Params.address }}
+					<h4 class="base-font">Details</h4>
+					{{ $details := .Site.Params.details }}
 					<ul class="fa-ul small">
-						<li class="mb-2"><a class="text-light" href="tel:{{ $address.phone }}"><span class="fa-li"><i
-										class="fa fa-phone"></i></span>{{ $address.phone }}</a></li>
-						<li class="mb-2"><a class="text-light" href="mailto:{{ $address.email }}"><span class="fa-li"><i
-										class="fa fa-envelope"></i></span>{{ $address.email }}</a></li>
+						{{ if $details.phone }}
 						<li class="mb-2">
-							<span class="fa-li"><i class="fa fa-map-marker"></i></span>{{ $address.address }}</a>
+							<a class="text-light" href="tel:{{ $details.phone }}">
+								<span class="fa-li"><i class="fa fa-phone"></i></span>{{ $details.phone }}
+							</a>
 						</li>
+						{{ end }}
+						{{ if $details.email }}
+						<li class="mb-2">
+							<a class="text-light" href="mailto:{{ $details.email }}">
+								<span class="fa-li"><i class="fa fa-envelope"></i></span>{{ $details.email }}
+							</a>
+						</li>
+						{{ end }}
+						{{ if $details.address }}
+						<li class="mb-2">
+							<span class="fa-li"><i class="fa fa-map-marker"></i></span>{{ $details.address }}
+						</li>
+						{{ end }}
+						{{ if $details.coc }}
+						<li class="mb-2">
+							<span class="fa-li"><i class="fa fa-bank"></i></span>{{ $details.coc }}
+						</li>
+						{{ end }}
 					</ul>
 				</div>
 			</div>
