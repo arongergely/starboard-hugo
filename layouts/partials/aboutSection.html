@@ -40,10 +40,14 @@
                             {{ .content | markdownify}}
                         </div>
                         <div>
-                            <a class="btn btn-primary mr-3 btn-zoom"
+                            {{ if .button1Enable }}
+                            <a class="btn btn-primary me-3 btn-zoom"
                                 href="{{ .button1Target | absURL }}">{{ .button1Name }}</a>
+                            {{ end }}
+                            {{ if .button2Enable }}
                             <a class="btn btn-outline-primary btn-zoom" href="{{ .button2Target | absURL }}">
                                 {{ .button2Name }} </a>
+                            {{ end }}
                         </div>
                     </div>
                 </div>

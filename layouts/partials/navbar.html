@@ -19,9 +19,13 @@
         </li>
         {{ end }}
       </ul>
+      {{ with .Site.Params.navbar }}
+      {{ if and (.buttonName) (.buttonTarget) }}
       <div class="navbar-nav">
-        <a href="{{ "contact" | absURL }}" class="btn btn-primary btn-zoom hire_button">Hire Me Now</a>
+        <a href="{{ .buttonTarget | absURL }}" class="btn btn-primary btn-zoom hire_button">{{ .buttonName }}</a>
       </div>
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </nav>

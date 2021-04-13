@@ -13,6 +13,8 @@ content: >
   to solve the design problem and find easy and better solutions to solve it. I always
   try my best to make good user interface with the best user experience. I have been
   working as a Visual designer from.
+button1Enable: true
+button2Enable: true
 button1Name: Hire me
 button2Name: Download CV
 button1Target: contact
