@@ -8,13 +8,11 @@
 
   {{ $cssslick := resources.Get "css/vendor/slick.css" | minify }}
   {{ $cssslicktheme := resources.Get "css/vendor/slick-theme.css" | minify }}
-  {{ $cssfontawesome := resources.Get "css/vendor/font-awesome.css" | minify }}
   {{ $cssmagnific := resources.Get "css/vendor/magnific-popup.css" | minify }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
   {{ $cssleaflet := resources.Get "css/vendor/leaflet.css" | minify }}
   <link rel="stylesheet" href="{{ $cssslick.Permalink }}" />
   <link rel="stylesheet" href="{{ $cssslicktheme.Permalink }}" />
-  <link rel="stylesheet" href="{{ $cssfontawesome.Permalink }}" />
   <link rel="stylesheet" href="{{ $cssmagnific.Permalink }}" />
   <link rel="stylesheet" href="{{ $style.Permalink }}"/>
   <link rel="stylesheet" href="{{ $cssleaflet.Permalink }}" />

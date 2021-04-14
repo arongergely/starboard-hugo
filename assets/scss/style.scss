@@ -6,6 +6,12 @@ VERSION:	1.0.0
 -------------------------------------------------------------------*/
 @import "variables";
 
+@import "../../src/fontawesome-free-5.15.3-web/scss/fontawesome";
+
+@import "../../src/fontawesome-free-5.15.3-web/scss/solid";
+
+@import "../../src/fontawesome-free-5.15.3-web/scss/brands";
+
 @import "../../src/bootstrap-5.0.0-beta1/scss/bootstrap";
 
 @import "typography";
