@@ -11,13 +11,15 @@
 // Button Override
 .btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-size: 16px;
+  font-weight: 600;
   border-radius: 7px;
 }
 
 .btn-lg {
-  padding: 20px 50px;
+  font-size: 18px;
+  padding: 15px 30px;
 }
 
 .btn-light {

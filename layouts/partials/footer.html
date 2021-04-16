@@ -30,7 +30,7 @@
 					</div>
 					{{ if .buttonEnable }}
 					<div class="footer__cta_action">
-						<a class="btn btn-light btn-zoom" href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
+						<a class="btn btn-lg btn-light btn-zoom" href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
 					</div>
 					{{ end }}
 				</div>
@@ -50,7 +50,7 @@
 					<ul class="unstyle-list small">
 						{{ $sitemap := .Site.Menus.sitemap }}
 						{{ range $sitemap }}
-						<li class="mb-2"><a class="text-light" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+						<li class="mb-2"><a class="text-light text-decoration-none" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
 						{{ end }}
 					</ul>
 				</div>
@@ -62,14 +62,14 @@
 					<ul class="fa-ul small">
 						{{ if $details.phone }}
 						<li class="mb-2">
-							<a class="text-light" href="tel:{{ $details.phone }}">
+							<a class="text-light text-decoration-none" href="tel:{{ $details.phone }}">
 								<span class="fa-li"><i class="fas fa-phone"></i></span>{{ $details.phone }}
 							</a>
 						</li>
 						{{ end }}
 						{{ if $details.email }}
 						<li class="mb-2">
-							<a class="text-light" href="mailto:{{ $details.email }}">
+							<a class="text-light text-decoration-none" href="mailto:{{ $details.email }}">
 								<span class="fa-li"><i class="fas fa-at"></i></span>{{ $details.email }}
 							</a>
 						</li>
@@ -91,7 +91,7 @@
 		<div class="row footer__footer">
 			<div class="col-lg-6">
 				<div class="footer__footer_copy text-light">
-					<p>{{ .Site.Params.copyright }}</p>
+					<p><i class="fas fa-copyright"></i> {{ .Site.Params.copyright }}</p>
 				</div>
 			</div>
 			<div class="col-lg-6">
